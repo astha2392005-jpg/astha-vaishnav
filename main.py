@@ -5,7 +5,7 @@ from pydantic import BaseModel
 import google.generativeai as genai
 
 # Apni Gemini API key yahan daalna (agar hai toh, nahi toh backup kaam karega)
-genai.configure(api_key="AIzaSyBPZ6OaDhpVxvtkOOTl-XD3nNkktYVF_dU")
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
 app = FastAPI()
 
